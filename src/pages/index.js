@@ -5,23 +5,19 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>nh-reader-ipo-bypass</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Blek!</title>
       </Head>
 
       <main className={styles.main}>
+        <img src="/jahy_crop-min.jpg" className={styles.img}/>
         <h1 className={styles.title}>
-          nh-reader-ipo-bypass
+          Blek!
         </h1>
-
-        <p className={styles.description}>
-          Usage: {' '}
-          <code className={styles.code}>/#CODE#/</code>
-        </p>
+        <a href="https://discord.com/oauth2/authorize?client_id=789172527569305610&scope=bot&permissions=19520" className={styles.btn}>Add</a>
       </main>
 
       <footer className={styles.footer}>
-        Next.js
+        <p>forked from <a href="https://github.com/gfjaru/nh-reader-ipo-bypass"> nh-reader-ipo-bypass</a></p>
       </footer>
     </div>
   )

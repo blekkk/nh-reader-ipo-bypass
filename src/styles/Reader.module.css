@@ -1,24 +1,37 @@
 .container {
   min-height: 100vh;
-  padding: 0 0.5rem;
-  display: block;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .metadata {
-  background: #7f8382;
-  color: #fff;
+  width: 100%;
+  margin: 1em 0 1em 0;
+  border: 1px white;
+  color: #8cd2d5;
   text-align: center;
 }
 
-.metadata p {
-  font-size: 75%;
+.metadata span {
+  font-size: 1em;
+}
+
+.main {
+  width: 100%;
 }
 
 .img {
-  width: 100%;
-  padding: 0 .5rem;
+  width: 50%;
   height: auto;
   display: block;
+  margin: 1em auto;
+}
+
+@media (max-width: 768px) {
+  .img {
+    width: 100%;
+  }
 }
 
 .img img {

@@ -14,12 +14,11 @@ async function Nhentai(code) {
       "content": {
         "title_en": jsonData.title.english.toString(),
         "title_pretty": jsonData.title.pretty.toString(),
-        "title_jp": jsonData.title.japanese.toString(),
-        "tags": jsonData.tags
-                .map((x) => x.name)
-                .join(", "),
+        "title_jp": jsonData.title.japanese ? jsonData.title.japanese.toString() : null,
+        "tags": jsonData.tags,
         "media_id": jsonData.media_id.toString(),
         "page": jsonData.num_pages.toString(),
+        "images": jsonData.images.pages,
       }
     }
   }
