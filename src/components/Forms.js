@@ -30,14 +30,14 @@ class Forms extends React.Component {
                     <div>
                         <p className={styles.p}>Nhentai-info</p>
                         <div className={styles.test}>
-                            <input className={styles.inputBox} onChange={(event) => this.handleInfoValue(event)}></input>
+                            <input placeholder={'Enter the holy code'} className={styles.inputBox} onChange={(event) => this.handleInfoValue(event)} ></input>
                             <a className={styles.a} href={`/nhen-info/${this.state.infoValue}`}>Go</a>
                         </div>
                         
                     </div>
                     <div>
                         <p className={styles.p}>Nhentai-reader</p>
-                        <input className={styles.inputBox} onChange={(event) => this.handleReaderValue(event)}></input>
+                        <input placeholder={'Enter the holy code'} className={styles.inputBox} onChange={(event) => this.handleReaderValue(event)}></input>
                         <a className={styles.a} href={`/nhen-reader/${this.state.readerValue}`}>Go</a>
                     </div>
                 </form>
