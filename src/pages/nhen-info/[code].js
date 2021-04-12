@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Nhentai from '../../components/nhentai'
 import styles from '../../styles/Info.module.css'
-import AddBot from '../../Add-bot'
+import UniversalLink from '../../components/UniversalLink'
 
 function Page({ metadata, code }) {
   if (metadata.content.status == 404){
@@ -35,7 +35,16 @@ function Page({ metadata, code }) {
       </Head>
       <div className={styles.container}>
           <div className={styles.main_box}>
-            <AddBot style={styles.add_bot}/>
+            <UniversalLink
+              style={styles.add_bot}
+              content={'HOME'}
+              link={'/'}
+            />
+            <UniversalLink 
+              style={styles.add_bot}
+              content={'ADD THE BOT !'}
+              link={'https://discord.com/oauth2/authorize?client_id=789172527569305610&scope=bot&permissions=19520'}
+            />
             <div className={styles.main_content}>
               <div className={styles.container_img}>
                   <img src={url} className={styles.img}/>

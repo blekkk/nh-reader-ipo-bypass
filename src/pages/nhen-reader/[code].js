@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Nhentai from '../../components/nhentai'
 import styles from '../../styles/Reader.module.css'
 import bot_styles from '../../styles/Info.module.css'
-import AddBot from '../../Add-bot'
+import UniversalLink from '../../components/UniversalLink'
 
 function Page({ metadata, code }) {
   if (metadata.content.status == 404){
@@ -36,7 +36,18 @@ function Page({ metadata, code }) {
       <div className={styles.container}>
         <div className={styles.metadata}>
           <div>
-            <AddBot style={bot_styles.add_bot}/>
+            <UniversalLink
+              style={styles.add_bot}
+              content={'HOME'}
+              link={'/'}
+            />
+          </div>
+          <div style={{marginTop: '15px'}}>
+            <UniversalLink 
+              style={styles.add_bot}
+              content={'ADD THE BOT !'}
+              link={'https://discord.com/oauth2/authorize?client_id=789172527569305610&scope=bot&permissions=19520'}
+            />
           </div>
           <div style={{marginTop: '15px'}}>
             <a href={`/nhen-info/${code}`}> {metadata.content.title_en}</a>
