@@ -1,9 +1,11 @@
 import Image from 'next/image'
 import Head from 'next/head'
-import Nhentai from '../components/nhentai'
-import styles from '../styles/Reader.module.css'
+import Nhentai from '../../components/nhentai'
+import styles from '../../styles/Reader.module.css'
+import bot_styles from '../../styles/Info.module.css'
+import AddBot from '../../Add-bot'
 
-function Page({ metadata }) {
+function Page({ metadata, code }) {
   if (metadata.content.status == 404){
     return (
       <>
@@ -33,7 +35,12 @@ function Page({ metadata }) {
       </Head>
       <div className={styles.container}>
         <div className={styles.metadata}>
-          <span> {metadata.content.title_en}</span>
+          <div>
+            <AddBot style={bot_styles.add_bot}/>
+          </div>
+          <div style={{marginTop: '15px'}}>
+            <a href={`/nhen-info/${code}`}> {metadata.content.title_en}</a>
+          </div>
         </div>
         <div className={styles.main}>
           {imgUrl.map( (url, key) => 
@@ -64,7 +71,7 @@ export async function getServerSideProps({
   if (metadata.status == 404) {
     return { notFound: true }
   } else {
-    return { props: { metadata } }
+    return { props: { metadata, code } }
   }
 }
 

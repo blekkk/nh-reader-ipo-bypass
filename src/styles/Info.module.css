@@ -13,6 +13,13 @@
     border-radius: 25px;
     display: flex;
     align-items: center;
+    flex-direction: column;
+}
+
+.main_content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .container_img {
@@ -48,3 +55,43 @@
     margin: 3px;
 }
 
+.add_bot {
+    position: relative;
+    margin: 15px auto 0 auto;
+    color: #8cd2d5;
+    text-align: center;
+}
+
+.read_button_margin {
+    background: #7289da;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        height: auto;
+    }
+
+    .main_content {
+        height: max-content;
+        flex-direction: column;
+        margin: 15px;
+    }
+
+    .img {
+        width: 50vw;
+        margin-top: 15px;
+    }
+
+    .container_img {
+        width: 100%;
+    }
+    
+    .container_content {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 15px 15px;
+    }
+
+  }
